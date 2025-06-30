@@ -4,11 +4,11 @@
 class MagazinSport : public MagazinImbracaminte {
 private:
 	string m_brand;
-	int m_nr_echipamente;
+	string m_specializare;
 
 public :
 	MagazinSport();
-	MagazinSport(string const& nume, string const& gen, bool cabina, string const& brand, int nr_echipament);
+	MagazinSport(string const& nume, string const& gen, bool cabina, string const& brand, string const& spec);
 
 	void Afiseaza() const override;
 

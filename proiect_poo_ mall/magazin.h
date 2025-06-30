@@ -8,6 +8,7 @@ protected:
 	static int next_id;
 	int m_id;
 	string m_nume;
+	//int m_etaj;
 
 public:
 	Magazin(); 

@@ -3,15 +3,15 @@
 
 MagazinSport::MagazinSport() : MagazinImbracaminte() {
 	m_brand = "neconoscut";
-	m_nr_echipamente = 0;
+	m_specializare = "necunoscut";
 }
 
 
-MagazinSport::MagazinSport(string const& nume, string const& gen, bool cabina, string const& brand, int nr_echipamente) : MagazinImbracaminte(nume,gen, cabina),
-m_brand(brand), m_nr_echipamente(nr_echipamente) {
+MagazinSport::MagazinSport(string const& nume, string const& gen, bool cabina, string const& brand, const string& spec) : MagazinImbracaminte(nume,gen, cabina),
+m_brand(brand), m_specializare(spec) {
 }
 
 void MagazinSport::Afiseaza() const {
 	MagazinImbracaminte::Afiseaza();
-	cout << ", Brand : " << m_brand << ", Nr echipamente: " << m_nr_echipamente<<"\n";
+	cout << ", Brand : " << m_brand << ", Nr echipamente: " << m_specializare<<"\n";
 }

@@ -30,6 +30,12 @@
     <ClCompile Include="magazin_urban.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="produs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="produs_imbracaminte.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="magazin.h">
@@ -42,6 +48,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="magazin_urban.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="magazin_cosmetice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="produs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="produs_imbracaminte.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
