@@ -19,5 +19,6 @@ public:
 	}
 
 	void AfiseazaInfo() const override ;
+	string getCategorie() const override { return "Electronice"; }
 
 };

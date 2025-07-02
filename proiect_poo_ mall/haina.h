@@ -14,4 +14,5 @@ public:
 	Haina(const string& nume, double pret, int cant, const string& marime, const string& material);
 
 	void AfiseazaInfo() const override;
+	string getCategorie() const override { return "Haine"; }
 };

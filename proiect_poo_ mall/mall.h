@@ -20,6 +20,7 @@ public:
 	int GetNrMagazine() const ;
 
 	void AfiseazaMall() const;
+	void AfiseazaStatisticiPeTip() const;
 
 	~Mall();
 

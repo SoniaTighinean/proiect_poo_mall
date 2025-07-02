@@ -29,11 +29,11 @@ public:
 	void AfiseazaInventar() const;
 	double CalculValoareTotala() const;
 	int GetNrProduse() const;
-
+	
 
 	virtual void Afiseaza() const = 0 ;
 	virtual string GetTipMagazin() const = 0;
-	virtual ~Magazin() = default;
+	virtual ~Magazin() {}
 	
 
 };

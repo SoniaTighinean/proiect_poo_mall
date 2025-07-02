@@ -1,5 +1,6 @@
 #include "magazin.h"
 #include <iostream>
+#include <map>
 
 int Magazin::next_id = 0;
 
@@ -29,10 +30,6 @@ void Magazin::AfiseazaInventar() const {
 double Magazin::CalculValoareTotala() const {
 	double total = 0.0;
 
-	if (m_inventar.empty()) {
-		cout << "Inventarul e gol.\n";
-		return 0;
-	}
 	for (const auto& p : m_inventar) {
 		total += p->GetPret() * p->GetCantitate();
 	}
@@ -46,4 +43,6 @@ int Magazin::GetNrProduse() const {
 	}
 	return total;
 }
+
+
 
