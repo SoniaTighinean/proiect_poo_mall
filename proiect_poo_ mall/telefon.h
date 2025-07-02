@@ -10,6 +10,13 @@ public:
 	Telefon();
 	Telefon(const string& nume, double pret, int cant, const string marca, int garantie, int stocare,int rezolutie);
 
+	int GetStocare() const {
+		return m_stocare;
+	}
+
+	int GetRezolutie() const {
+		return m_rezolutie;
+	}
 	void AfiseazaInfo()const override;
 
 };

@@ -14,7 +14,7 @@ public:
 	MagazinElectronice();
 	MagazinElectronice(const string& nume, const vector<string>& marca, bool service);
 
-	const vector<string>& GetBrand() const {
+	const vector<string>& GetMarci() const {
 		return m_marci;
 	}
 

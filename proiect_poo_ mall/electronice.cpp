@@ -3,7 +3,7 @@
 
 Electronice::Electronice() : Produs() {
 	m_marca = "necunoscut";
-	int m_garantie = 0;
+	m_garantie = 0;
 }
 
 Electronice::Electronice(const string& nume, double pret, int cant,const string&marca, int garantie) : Produs(nume, pret, cant),
