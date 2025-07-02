@@ -18,5 +18,6 @@ public:
 		return m_are_imprimeu;
 	}
 	void AfiseazaInfo() const override;
+	double CalculValoareTotala() const override;
 
 };

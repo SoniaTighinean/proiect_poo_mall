@@ -18,5 +18,6 @@ public:
 		return m_rezolutie;
 	}
 	void AfiseazaInfo()const override;
+	double CalculValoareTotala() const override;
 
 };

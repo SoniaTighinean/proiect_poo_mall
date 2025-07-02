@@ -19,6 +19,7 @@ public:
 	}
 
 	void AfiseazaInfo() const override ;
-	string getCategorie() const override { return "Electronice"; }
+	string GetCategorie() const override { return "Electronice"; }
+	double CalculValoareTotala() const override;
 
 };

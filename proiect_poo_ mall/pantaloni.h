@@ -17,5 +17,6 @@ public:
 		return m_nr_buzunare;
 	}
 	void AfiseazaInfo() const override;
+	double CalculValoareTotala() const override;
 
 };

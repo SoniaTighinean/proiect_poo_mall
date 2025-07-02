@@ -1,6 +1,7 @@
 #pragma once
 #include "magazin.h"
 
+using namespace std;
 class Mall {
 private:
 	string m_nume;
@@ -15,7 +16,7 @@ public:
 	}
 
 	void AdaugaMagazin(Magazin* magazin);
-	double CalcValoareTotala() const;
+	double CalculValoareTotala() const;
 	int GetNrProduse() const;
 	int GetNrMagazine() const ;
 

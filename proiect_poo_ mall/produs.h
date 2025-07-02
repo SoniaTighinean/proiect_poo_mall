@@ -25,8 +25,8 @@ public:
 		return m_cantitate;
 	}
 	virtual void AfiseazaInfo() const=0 ;
-	virtual string getCategorie() const = 0;
-	virtual double calculeazaValoareTotala() const;
+	virtual string GetCategorie() const = 0;
+	virtual double CalculValoareTotala() const;
 	virtual ~Produs(){}
 
 

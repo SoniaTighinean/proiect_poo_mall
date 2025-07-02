@@ -8,6 +8,8 @@ private:
 public:
 	Laptop();
 	Laptop(const string& nume, double pret, int cant, const string marca, int garantie, const string& procesor, int memorie);
-
+	
+	
 	void AfiseazaInfo() const override;
+	double CalculValoareTotala() const override;
 };

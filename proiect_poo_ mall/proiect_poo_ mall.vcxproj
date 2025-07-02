@@ -134,12 +134,17 @@
     <ClCompile Include="magazin.cpp" />
     <ClCompile Include="magazin_imbracaminte.cpp" />
     <ClCompile Include="magazin_urban.cpp" />
-    <ClCompile Include="mall.cpp" />
+    <ClCompile Include="mall.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
+    </ClCompile>
     <ClCompile Include="pantaloni.cpp" />
     <ClCompile Include="produs.cpp" />
     <ClCompile Include="haina.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="telefon.cpp" />
+    <ClCompile Include="telefon.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+    </ClCompile>
     <ClCompile Include="tricou.cpp" />
   </ItemGroup>
   <ItemGroup>

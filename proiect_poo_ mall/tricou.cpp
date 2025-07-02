@@ -18,3 +18,11 @@ void Tricou::AfiseazaInfo() const {
 	else
 		cout << "NU\n";
 }
+
+double Tricou::CalculValoareTotala() const {
+	double valoare = Produs::CalculValoareTotala();
+	if (m_are_imprimeu) {
+		valoare = valoare * 1.1;
+	}
+	return valoare;
+}

@@ -13,3 +13,11 @@ void Pantaloni::AfiseazaInfo() const {
 	Haina::AfiseazaInfo();
 	cout << "Tip: " << m_tip << ", nr_buzunare" << m_nr_buzunare;
 }
+
+double Pantaloni::CalculValoareTotala() const {
+	double valoare = Produs::CalculValoareTotala();
+	if (m_nr_buzunare > 4) {
+		valoare *= 1.15;
+	}
+	return valoare;
+}

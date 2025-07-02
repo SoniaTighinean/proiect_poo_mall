@@ -13,3 +13,11 @@ void Electronice::AfiseazaInfo() const {
 	cout << "Nume: " << m_nume << ", pret: " << m_pret << ", cantiate: " << m_cantitate;
 	cout << ", marca: " << m_marca << ", garantie: " << m_garantie<<" luni ";
 }
+
+double Electronice::CalculValoareTotala() const {
+	double valoare = CalculValoareTotala();
+	if (m_garantie > 24) {
+		valoare *= 1.20;
+	}
+	return valoare;
+}

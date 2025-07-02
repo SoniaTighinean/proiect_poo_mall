@@ -13,3 +13,11 @@ void Laptop::AfiseazaInfo() const {
 	Electronice::AfiseazaInfo();
 	cout << ", Procesor: " << m_procesor << ", memorie: " << m_memorie << "GB\n";
 }
+
+double Laptop::CalculValoareTotala() const {
+	double valoare = CalculValoareTotala();
+	if (m_memorie > 8) {
+		valoare *= 1.2;
+	}
+	return valoare;
+}

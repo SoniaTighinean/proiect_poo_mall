@@ -8,3 +8,6 @@ Produs::Produs() {
 
 Produs::Produs(const string& nume, double pret, int cant) : m_nume(nume), m_pret(pret), m_cantitate(cant) {}
 
+double Produs::CalculValoareTotala() const {
+	return m_pret * m_cantitate;
+}

@@ -37,6 +37,11 @@ int main()
 
 	AFI->AfiseazaMall();
 
+	AFI->AfiseazaStatisticiPeTip();
+
+	delete AFI;
+
+	return 0;
 	
 
 }

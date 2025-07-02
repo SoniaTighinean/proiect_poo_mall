@@ -13,3 +13,11 @@ void Telefon::AfiseazaInfo() const {
 	Electronice::AfiseazaInfo();
 	cout << ", Spatiu stocare: "<<m_stocare << "GB, Rezolutie Camera: " << m_rezolutie << "MP\n";
 }
+
+double Telefon::CalculValoareTotala() const {
+	double valoare = CalculValoareTotala();
+	if (m_stocare > 256) {
+		valoare *= 1.25;
+	}
+	return valoare;
+}
