@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="electronice.cpp" />
+    <ClCompile Include="laptop.cpp" />
     <ClCompile Include="magazin_electronice.cpp" />
     <ClCompile Include="magazin_sport.cpp" />
     <ClCompile Include="magazin.cpp" />
@@ -135,10 +137,13 @@
     <ClCompile Include="pantaloni.cpp" />
     <ClCompile Include="produs.cpp" />
     <ClCompile Include="haina.cpp" />
-    <ClCompile Include="proiect_poo_ mall.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="telefon.cpp" />
     <ClCompile Include="tricou.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="electronice.h" />
+    <ClInclude Include="laptop.h" />
     <ClInclude Include="magazin_electronice.h" />
     <ClInclude Include="magazin_sport.h" />
     <ClInclude Include="magazin_imbracaminte.h" />
@@ -147,6 +152,7 @@
     <ClInclude Include="pantaloni.h" />
     <ClInclude Include="produs.h" />
     <ClInclude Include="haina.h" />
+    <ClInclude Include="telefon.h" />
     <ClInclude Include="tricou.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

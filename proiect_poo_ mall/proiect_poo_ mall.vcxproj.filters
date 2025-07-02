@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="proiect_poo_ mall.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="magazin.cpp">
@@ -45,6 +45,15 @@
     <ClCompile Include="magazin_electronice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="electronice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="laptop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="telefon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="magazin.h">
@@ -72,6 +81,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pantaloni.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="electronice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="telefon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="laptop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

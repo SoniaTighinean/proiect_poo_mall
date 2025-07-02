@@ -1,14 +1,15 @@
 #pragma once
 #include "magazin_imbracaminte.h"
+#include <vector>
 
 class MagazinSport : public MagazinImbracaminte {
 private:
-	string m_brand;
-	string m_specializare;
+	vector<string> m_branduri;
+	string m_tip_sport;
 
 public :
 	MagazinSport();
-	MagazinSport(string const& nume, string const& gen, bool cabina, string const& brand, string const& spec);
+	MagazinSport( const string & nume, const string& gen, bool cabina, const vector<string>& brand,  const string& tip);
 
 	void Afiseaza() const override;
 	string GetTipMagazin() const override;
