@@ -11,7 +11,7 @@ Pantaloni::Pantaloni(const string& nume, double pret, int cant, const string& ma
 
 void Pantaloni::AfiseazaInfo() const {
 	Haina::AfiseazaInfo();
-	cout << "Tip: " << m_tip << ", nr_buzunare" << m_nr_buzunare;
+	cout << "Tip: " << m_tip << ", nr_buzunare: " << m_nr_buzunare;
 }
 
 double Pantaloni::CalculValoareTotala() const {

@@ -14,9 +14,10 @@ Magazin::Magazin(const string& nume) : m_nume(nume) {
 }
 
 void Magazin::AdaugaProdus(Produs* produs) {
-	if (produs != NULL) {
-		m_inventar.push_back(produs);
+	if (produs == nullptr) {
+		throw invalid_argument("Produsul e null");
 	}
+	m_inventar.push_back(produs);
 
 }
 
@@ -44,5 +45,10 @@ int Magazin::GetNrProduse() const {
 	return total;
 }
 
+Magazin::~Magazin() {
+	for (auto* p : m_inventar) {
+		delete p;
+	}
 
+}
 

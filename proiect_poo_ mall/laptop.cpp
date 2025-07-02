@@ -15,7 +15,7 @@ void Laptop::AfiseazaInfo() const {
 }
 
 double Laptop::CalculValoareTotala() const {
-	double valoare = CalculValoareTotala();
+	double valoare = Produs::CalculValoareTotala();
 	if (m_memorie > 8) {
 		valoare *= 1.2;
 	}

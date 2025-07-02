@@ -15,7 +15,7 @@ void Telefon::AfiseazaInfo() const {
 }
 
 double Telefon::CalculValoareTotala() const {
-	double valoare = CalculValoareTotala();
+	double valoare = Produs::CalculValoareTotala();
 	if (m_stocare > 256) {
 		valoare *= 1.25;
 	}

@@ -15,7 +15,7 @@ void Electronice::AfiseazaInfo() const {
 }
 
 double Electronice::CalculValoareTotala() const {
-	double valoare = CalculValoareTotala();
+	double valoare = Produs::CalculValoareTotala();
 	if (m_garantie > 24) {
 		valoare *= 1.20;
 	}
