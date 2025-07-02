@@ -23,7 +23,9 @@ public:
 		return m_nume;
 	}
 
+
 	virtual void Afiseaza() const = 0 ;
+	virtual string GetTipMagazin() const = 0;
 	virtual ~Magazin() = default;
 	
 

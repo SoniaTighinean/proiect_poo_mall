@@ -127,22 +127,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="magazin_electronice.cpp" />
     <ClCompile Include="magazin_sport.cpp" />
     <ClCompile Include="magazin.cpp" />
     <ClCompile Include="magazin_imbracaminte.cpp" />
     <ClCompile Include="magazin_urban.cpp" />
+    <ClCompile Include="pantaloni.cpp" />
     <ClCompile Include="produs.cpp" />
-    <ClCompile Include="produs_imbracaminte.cpp" />
+    <ClCompile Include="haina.cpp" />
     <ClCompile Include="proiect_poo_ mall.cpp" />
+    <ClCompile Include="tricou.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="magazin_cosmetice.h" />
+    <ClInclude Include="magazin_electronice.h" />
     <ClInclude Include="magazin_sport.h" />
     <ClInclude Include="magazin_imbracaminte.h" />
     <ClInclude Include="magazin.h" />
     <ClInclude Include="magazin_urban.h" />
+    <ClInclude Include="pantaloni.h" />
     <ClInclude Include="produs.h" />
-    <ClInclude Include="produs_imbracaminte.h" />
+    <ClInclude Include="haina.h" />
+    <ClInclude Include="tricou.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

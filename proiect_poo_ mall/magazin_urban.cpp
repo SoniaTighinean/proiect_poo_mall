@@ -11,3 +11,7 @@ void MagazinUrban::Afiseaza() const {
 	MagazinImbracaminte::Afiseaza();
 	cout << ", colectie: " << m_colectie << "\n";
 }
+
+string MagazinUrban::GetTipMagazin() const {
+	return "Urban";
+}

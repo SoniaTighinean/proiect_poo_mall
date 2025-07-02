@@ -11,5 +11,6 @@ public :
 	MagazinSport(string const& nume, string const& gen, bool cabina, string const& brand, string const& spec);
 
 	void Afiseaza() const override;
+	string GetTipMagazin() const override;
 
 };

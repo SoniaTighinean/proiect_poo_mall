@@ -17,3 +17,7 @@ void MagazinImbracaminte::Afiseaza() const {
 		cout << "NU ";
 
 }
+
+string MagazinImbracaminte::GetTipMagazin() const {
+	return "imbracaminte";
+}

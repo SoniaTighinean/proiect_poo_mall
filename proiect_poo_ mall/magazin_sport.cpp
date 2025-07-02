@@ -15,3 +15,7 @@ void MagazinSport::Afiseaza() const {
 	MagazinImbracaminte::Afiseaza();
 	cout << ", Brand : " << m_brand << ", Nr echipamente: " << m_specializare<<"\n";
 }
+
+string MagazinSport::GetTipMagazin() const {
+	return "Sport";
+}

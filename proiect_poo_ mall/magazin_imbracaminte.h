@@ -8,12 +8,13 @@ class MagazinImbracaminte : public Magazin {
 protected:
 	string m_gen;
 	bool m_are_cabina;
-	string m_tip;
+	
 
 public:
 	MagazinImbracaminte();
 	MagazinImbracaminte(const string& nume,  const string& gen, bool cabina);
 
 	void Afiseaza() const override;
+	string GetTipMagazin() const override;
 
 };

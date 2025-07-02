@@ -33,7 +33,16 @@
     <ClCompile Include="produs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="produs_imbracaminte.cpp">
+    <ClCompile Include="haina.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tricou.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pantaloni.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="magazin_electronice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,13 +59,19 @@
     <ClInclude Include="magazin_urban.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="magazin_cosmetice.h">
+    <ClInclude Include="magazin_electronice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="produs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="produs_imbracaminte.h">
+    <ClInclude Include="haina.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tricou.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pantaloni.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
