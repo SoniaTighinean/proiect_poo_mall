@@ -134,6 +134,7 @@
     <ClCompile Include="magazin.cpp" />
     <ClCompile Include="magazin_imbracaminte.cpp" />
     <ClCompile Include="magazin_urban.cpp" />
+    <ClCompile Include="mall.cpp" />
     <ClCompile Include="pantaloni.cpp" />
     <ClCompile Include="produs.cpp" />
     <ClCompile Include="haina.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="magazin_imbracaminte.h" />
     <ClInclude Include="magazin.h" />
     <ClInclude Include="magazin_urban.h" />
+    <ClInclude Include="mall.h" />
     <ClInclude Include="pantaloni.h" />
     <ClInclude Include="produs.h" />
     <ClInclude Include="haina.h" />

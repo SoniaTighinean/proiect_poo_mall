@@ -12,30 +12,30 @@
 #include "magazin_electronice.h"
 #include "laptop.h"
 #include "telefon.h"
+#include "mall.h"
 
 int main()
 {
-	vector<Magazin*> mall;
 
-	mall.push_back(new MagazinSport("InterSport", "unisex", true, { "nike"}, "baschet"));
-	mall.push_back(new MagazinUrban("ZARA", "femei", true, "primavara 2025"));
+	Mall* AFI = new Mall("Afi Cotroceni");
 
+	MagazinSport* intersport = new MagazinSport("InterSport", "unisex", true, { "nike","adidas" }, "baschet");
+	MagazinUrban* zara = new  MagazinUrban("ZARA", "femei", true, "primavara 2025");
+	
 	vector<string> marci = { "Apple", "Samsung", "Lenovo" };
-	mall.push_back(new MagazinElectronice("Altex", marci, true));
+	MagazinElectronice* altex = new MagazinElectronice("Altex", marci, true);
+	
+	AFI->AdaugaMagazin(intersport);
+	AFI->AdaugaMagazin(zara);
+	AFI->AdaugaMagazin(altex);
+	
+	intersport->AdaugaProdus(new Tricou("tricou adidas", 50.0, 2, "M", "bumbac", "rosu", true));
 
-	vector<Produs*> produse;
-	produse.push_back(new Tricou("tricou adidas", 50.0, 2, "M", "bumbac", "rosu", true));
+	altex->AdaugaProdus(new Laptop("Lap ASUS", 5499.99, 1, "ASUS", 24, "Intel i7", 1000));
 
-	produse.push_back(new Laptop("Lap ASUS", 5499.99, 1, "ASUS", 24, "Intel i7", 1000));
+	altex->AdaugaProdus(new Telefon("Iph 16", 4599.99, 2, "Apple ", 48, 256, 8));
 
-	produse.push_back(new Telefon("Iph 16", 4599.99, 2, "Apple ", 48, 256, 8));
-	for (auto m : mall) {
-		m->Afiseaza(); 
-	}
-
-	for (auto p : produse) {
-		p->AfiseazaInfo();
-	}
+	AFI->AfiseazaMall();
 
 	
 

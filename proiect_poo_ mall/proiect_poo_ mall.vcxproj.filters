@@ -54,6 +54,9 @@
     <ClCompile Include="telefon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="magazin.h">
@@ -90,6 +93,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="laptop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mall.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

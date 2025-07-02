@@ -22,7 +22,7 @@ void Magazin::AdaugaProdus(Produs* produs) {
 void Magazin::AfiseazaInventar() const {
 	cout << "Inventar " <<m_nume<<": \n";
 	for (const auto& p : m_inventar) {
-		cout << p << " ";
+		p->AfiseazaInfo();
 	}
 }
 
@@ -31,7 +31,7 @@ double Magazin::CalculValoareTotala() const {
 
 	if (m_inventar.empty()) {
 		cout << "Inventarul e gol.\n";
-		return;
+		return 0;
 	}
 	for (const auto& p : m_inventar) {
 		total += p->GetPret() * p->GetCantitate();
