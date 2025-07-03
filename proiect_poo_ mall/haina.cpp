@@ -10,10 +10,20 @@ Haina::Haina(const string& nume, double pret, int cant, const string& marime, co
 m_marime(marime), m_material(material) { }
 
 
+string Haina::GetCategorie() const  { 
+	return "Haine";
+}
 
-void Haina::AfisareLunga() const {
+double Haina::CalculValoareTotala() const {
+	double valoare = Produs::CalculValoareTotala();
+	if (m_material == "bumbac")
+		valoare *= 1.1;
+
+	return valoare;
+}
+void Haina::AfisareDetaliata() const {
 	cout << "Nume: " << m_nume << ", pret: " << m_pret << ", cantitate: " << m_cantitate;
-	cout << ", marime: " << m_marime << ", material: " << m_material ;
+	cout << ", marime: " << m_marime << ", material: " << m_material <<"\n";
 }
 
 void Haina::AfisareScurta() const {

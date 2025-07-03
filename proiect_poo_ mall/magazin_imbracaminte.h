@@ -16,7 +16,7 @@ public:
 
 
 	string GetTipMagazin() const override;
-	void AfisareLunga() const override;
+	void AfisareDetaliata() const override;
 	void AfisareScurta() const override;
 
 };

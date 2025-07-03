@@ -8,7 +8,7 @@ MagazinImbracaminte::MagazinImbracaminte() : Magazin() {
 
 MagazinImbracaminte::MagazinImbracaminte(const string& nume, const string& gen, bool cabina): Magazin(nume), m_gen(gen), m_are_cabina(cabina) {}
 
-void MagazinImbracaminte::AfisareLunga() const {
+void MagazinImbracaminte::AfisareDetaliata() const {
 	cout << " Id: " << m_id << ", Nume: "<< m_nume;
 	cout << ", Gen: " << m_gen << ", cabina de proba: ";
 	if (m_are_cabina)

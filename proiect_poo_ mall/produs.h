@@ -29,7 +29,7 @@ public:
 	virtual string GetCategorie() const = 0;
 	virtual double CalculValoareTotala() const;
 	
-	void AfisareLunga() const override;
+	void AfisareDetaliata() const override;
 	void AfisareScurta() const override;
 
 	virtual ~Produs(){}

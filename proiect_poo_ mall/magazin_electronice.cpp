@@ -7,7 +7,7 @@ MagazinElectronice::MagazinElectronice() : Magazin() {
 MagazinElectronice::MagazinElectronice(const string& nume, const vector<string>& marca, bool service) 
 	:Magazin(nume) , m_marci(marca), m_are_service(service) { }
 
-void MagazinElectronice::AfisareLunga() const {
+void MagazinElectronice::AfisareDetaliata() const {
 	cout << "Id: " << m_id << ", Nume: " << m_nume<<", Marci: ";
 	for (const auto& b : m_marci) {
 		cout << b << ", ";

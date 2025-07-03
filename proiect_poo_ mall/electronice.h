@@ -18,10 +18,10 @@ public:
 		return m_garantie;
 	}
 
-	string GetCategorie() const override { return "Electronice"; }
+	string GetCategorie() const override;
 	double CalculValoareTotala() const override;
 
-	void AfisareLunga() const override;
+	void AfisareDetaliata() const override;
 	void AfisareScurta() const override;
 
 };

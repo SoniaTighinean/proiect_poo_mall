@@ -23,7 +23,7 @@ public:
 
 	void AfiseazaStatisticiPeTip() const;
 
-	void AfisareLunga() const override;
+	void AfisareDetaliata() const override;
 	void AfisareScurta() const override;
 
 	~Mall();

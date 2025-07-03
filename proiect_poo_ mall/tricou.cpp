@@ -10,8 +10,8 @@ Tricou::Tricou(const string& nume, double pret, int cant, const string& marime, 
 	: Haina(nume,pret,cant,marime, material) ,m_culoare(culoare), m_are_imprimeu(imprimeu) {   
 }
 
-void Tricou::AfisareLunga() const {
-	Haina::AfisareLunga();
+void Tricou::AfisareDetaliata() const {
+	Haina::AfisareDetaliata();
 	cout << ", Culoare: " << m_culoare << ", are imprimeu : ";
 	if (m_are_imprimeu)
 		cout << "DA\n";
@@ -21,7 +21,7 @@ void Tricou::AfisareLunga() const {
 }
  
 void Tricou::AfisareScurta() const {
-	cout << "Tricou: " << m_nume;
+	cout << "Tricou: " << m_nume<<"\n";
 
 }
 

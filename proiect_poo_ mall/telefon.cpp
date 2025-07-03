@@ -9,8 +9,8 @@ Telefon::Telefon() : Electronice() {
 Telefon::Telefon(const string& nume, double pret, int cant, const string marca, int garantie, int stocare, int rezolutie) : Electronice(nume,pret,cant,marca,garantie) , 
 	m_stocare(stocare) , m_rezolutie(rezolutie){ }
 
-void Telefon::AfisareLunga() const {
-	Electronice::AfisareLunga();
+void Telefon::AfisareDetaliata() const {
+	Electronice::AfisareDetaliata();
 	cout << ", Spatiu stocare: "<<m_stocare << "GB, Rezolutie Camera: " << m_rezolutie << "MP\n";
 }
 

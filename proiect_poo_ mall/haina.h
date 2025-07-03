@@ -19,8 +19,9 @@ public:
 	string GetMaterial() const {
 		return m_material;
 	}
-	string GetCategorie() const override { return "Haine"; }
+	string GetCategorie() const override;
+	double CalculValoareTotala() const override;
 
-	void AfisareLunga() const override;
+	void AfisareDetaliata() const override;
 	void AfisareScurta() const override;
 };

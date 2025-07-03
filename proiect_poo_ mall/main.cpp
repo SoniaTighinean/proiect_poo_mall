@@ -4,7 +4,7 @@
 #include "magazin.h"
 #include "magazin_imbracaminte.h"
 #include "magazin_sport.h"
-#include "magazin_urban.h"
+#include "magazin_casual.h"
 #include "produs.h"
 #include "haina.h"
 #include "tricou.h"
@@ -20,28 +20,86 @@ int main()
 
 	Mall* AFI = new Mall("Afi Cotroceni");
 
-	MagazinSport* intersport = new MagazinSport("InterSport", "unisex", true, { "nike","adidas" }, "baschet");
-	MagazinUrban* zara = new  MagazinUrban("ZARA", "femei", true, "primavara 2025");
-	
+	//crearea magazinelor care au tipuri diferite: sport, casual, electronice
+
+	MagazinSport* m1 = new MagazinSport("InterSport", "unisex", true, { "nike","adidas" }, "baschet");
+	MagazinCasual* m2 = new  MagazinCasual("ZARA", "femei", true, "primavara 2025");
+	MagazinCasual* m3 = new MagazinCasual("Berska", "unisex", false, "vara");
+
 	vector<string> marci = { "Apple", "Samsung", "Lenovo" };
-	MagazinElectronice* altex = new MagazinElectronice("Altex", marci, true);
-	
-	AFI->AdaugaMagazin(intersport);
-	AFI->AdaugaMagazin(zara);
-	AFI->AdaugaMagazin(altex);
-	
-	intersport->AdaugaProdus(new Tricou("tricou adidas", 50.0, 2, "M", "bumbac", "rosu", true));
+	MagazinElectronice* m4 = new MagazinElectronice("Altex", marci, true);
 
-	altex->AdaugaProdus(new Laptop("Lap ASUS", 5499.99, 1, "ASUS", 24, "Intel i7", 1000));
 
-	altex->AdaugaProdus(new Telefon("Iph 16", 4599.99, 2, "Apple ", 48, 256, 8));
+	//crearea produselor diferite
+	Haina* p1 = new Tricou("tricou adidas", 50.0, 2, "M", "bumbac", "rosu", true);
+	Laptop* p2 = new Laptop("Lap ASUS", 5499.99, 1, "ASUS", 24, "Intel i7", 1000);
+	Telefon* p3 = new Telefon("Iph 16", 4599.99, 2, "Apple ", 48, 256, 8);
+	Haina* p4 = new Haina("Bluza", 100.00, 1, "M", "bumbac");
+	Electronice* p5 = new Electronice("Aspirator", 2499.99, 3, "DELL", 12);
 
-	AFI->AfisareLunga();
-	
+	//asocierea magazinelor cu mall-ul
+	AFI->AdaugaMagazin(m1);
+	AFI->AdaugaMagazin(m2);
+	AFI->AdaugaMagazin(m3);
+	AFI->AdaugaMagazin(m4);
+
+	//adaugarea produselor intr-un magazin specific
+	m1->AdaugaProdus(p1);
+	m4->AdaugaProdus(p2);
+	m4->AdaugaProdus(p3);
+	m2->AdaugaProdus(p4);
+	m4->AdaugaProdus(p5);
+
+
+	//interfata afisare
+	vector<Afisare*> tot;
+
+	tot.push_back(AFI);
+	tot.push_back(m1);
+	tot.push_back(m2);
+	tot.push_back(m3);
+
+	tot.push_back(p1);
+	tot.push_back(p2);
+	tot.push_back(p3);
+
+	cout << "Afisarea toturor delaliilor: \n";
+	for (const auto& t : tot) {
+		t->AfisareScurta();
+		//t->AfisareDetaliata();
+
+		auto magazin = dynamic_cast<Magazin*>(t);
+		if (magazin != nullptr) {
+			cout << "Afisare Inventar: \n";
+			magazin->AfiseazaInventar();
+		}
+		
+	}
+
+	vector<Magazin*> magazine;
+	magazine.push_back(m1);
+	magazine.push_back(m2);
+	magazine.push_back(m3);
+	magazine.push_back(m4);
+
+	cout << "\n";
+	cout << "Pentru fiecare magazin se afiseaza numele, tipul, valoarea totala si inventarul\n";
+	for (const auto& m : magazine) {
+		cout << m->GetNume() << " ,Tip: " << m->GetTipMagazin()  
+			<< " Valoare totala produse: " << m->CalculValoareTotala() << " lei"
+			<<"Numar total de produse: " << m->GetNrProduse() << "\n";
+		m->AfiseazaInventar();
+	}
+
+	cout << "\n";
+	cout << "Valoarea totala a mall-ului";
+	cout << AFI->CalculValoareTotala() << " lei\n";
+
+	cout << "\n";
+	cout << "Afiseare Statistici pentru fiecare tip: \n";
 	AFI->AfiseazaStatisticiPeTip();
 
-	delete AFI;
-
+	
 	return 0;
 }
 

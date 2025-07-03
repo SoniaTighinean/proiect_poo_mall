@@ -11,8 +11,8 @@ MagazinSport::MagazinSport(const string& nume, const string& gen, bool cabina, c
 m_branduri(brand), m_tip_sport(tip) {
 }
 
-void MagazinSport::AfisareLunga() const {
-	MagazinImbracaminte::AfisareLunga();
+void MagazinSport::AfisareDetaliata() const {
+	MagazinImbracaminte::AfisareDetaliata();
 	cout << ", Branduri : ";
 	for (const auto& b : m_branduri)
 		cout << b << ", ";
@@ -20,7 +20,7 @@ void MagazinSport::AfisareLunga() const {
 }
 
 void MagazinSport::AfisareScurta() const {
-	cout << "Magazin Sport" << m_nume << "\n";
+	cout << "Magazin Sport: " << m_nume << "\n";
 }
 
 string MagazinSport::GetTipMagazin() const {

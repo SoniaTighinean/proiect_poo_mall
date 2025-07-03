@@ -24,7 +24,7 @@ void Magazin::AdaugaProdus(Produs* produs) {
 void Magazin::AfiseazaInventar() const {
 	cout << "Inventar " <<m_nume<<": \n";
 	for (const auto& p : m_inventar) {
-		p->AfisareLunga();
+		p->AfisareDetaliata();
 	}
 }
 
@@ -45,8 +45,8 @@ int Magazin::GetNrProduse() const {
 	return total;
 }
 
-void Magazin::AfisareLunga() const {
-	
+void Magazin::AfisareDetaliata() const {
+	cout << " ID: "<<m_id<<", Nume: "<<m_nume<<"\n";
 }
 
 void Magazin::AfisareScurta() const {
