@@ -9,7 +9,7 @@ MagazinCasual::MagazinCasual(string const& nume, string const& gen, bool cabina,
 
 void MagazinCasual::AfisareDetaliata() const {
 	MagazinImbracaminte::AfisareDetaliata();
-	cout << ", colectie: " << m_colectie << "\n";
+	cout << ", Colectie: " << m_colectie << "\n";
 }
 
 void MagazinCasual::AfisareScurta() const {
