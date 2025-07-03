@@ -35,8 +35,8 @@ int main()
 
 	altex->AdaugaProdus(new Telefon("Iph 16", 4599.99, 2, "Apple ", 48, 256, 8));
 
-	AFI->AfiseazaMall();
-
+	AFI->Afiseaza();
+	
 	AFI->AfiseazaStatisticiPeTip();
 
 	delete AFI;

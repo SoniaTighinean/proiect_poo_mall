@@ -24,7 +24,7 @@ public:
 	int GetCantitate() const {
 		return m_cantitate;
 	}
-	virtual void AfiseazaInfo() const=0 ;
+	virtual void Afiseaza() const=0 ;
 	virtual string GetCategorie() const = 0;
 	virtual double CalculValoareTotala() const;
 	virtual ~Produs(){}

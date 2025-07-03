@@ -17,7 +17,7 @@ public:
 	bool GetImprimeu() const {
 		return m_are_imprimeu;
 	}
-	void AfiseazaInfo() const override;
+	void Afiseaza() const override;
 	double CalculValoareTotala() const override;
 
 };

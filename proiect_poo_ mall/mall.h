@@ -20,7 +20,7 @@ public:
 	int GetNrProduse() const;
 	int GetNrMagazine() const ;
 
-	void AfiseazaMall() const;
+	void Afiseaza() const;
 	void AfiseazaStatisticiPeTip() const;
 
 	~Mall();

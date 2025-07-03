@@ -16,7 +16,7 @@ public:
 	int GetNrBuzunare() const {
 		return m_nr_buzunare;
 	}
-	void AfiseazaInfo() const override;
+	void Afiseaza() const override;
 	double CalculValoareTotala() const override;
 
 };

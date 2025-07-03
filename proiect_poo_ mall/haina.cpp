@@ -11,7 +11,7 @@ m_marime(marime), m_material(material) { }
 
 
 
-void Haina::AfiseazaInfo() const {
+void Haina::Afiseaza() const {
 	cout << "Nume: " << m_nume << ", pret: " << m_pret << ", cantitate: " << m_cantitate;
 	cout << ", marime: " << m_marime << ", material: " << m_material ;
 }

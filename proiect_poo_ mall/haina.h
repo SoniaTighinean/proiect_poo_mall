@@ -19,6 +19,6 @@ public:
 	string GetMaterial() const {
 		return m_material;
 	}
-	void AfiseazaInfo() const override;
+	void Afiseaza() const override;
 	string GetCategorie() const override { return "Haine"; }
 };

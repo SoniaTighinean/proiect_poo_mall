@@ -24,7 +24,7 @@ void Magazin::AdaugaProdus(Produs* produs) {
 void Magazin::AfiseazaInventar() const {
 	cout << "Inventar " <<m_nume<<": \n";
 	for (const auto& p : m_inventar) {
-		p->AfiseazaInfo();
+		p->Afiseaza();
 	}
 }
 

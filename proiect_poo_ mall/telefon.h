@@ -17,7 +17,7 @@ public:
 	int GetRezolutie() const {
 		return m_rezolutie;
 	}
-	void AfiseazaInfo()const override;
+	void Afiseaza()const override;
 	double CalculValoareTotala() const override;
 
 };

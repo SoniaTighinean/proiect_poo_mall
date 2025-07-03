@@ -32,7 +32,7 @@ int Mall::GetNrProduse() const {
 	return total;
 }
 
-void Mall::AfiseazaMall() const {
+void Mall::Afiseaza() const {
 	cout << " Mall " << m_nume << ": \n";
 	cout << "Magazine disponibile:  \n";
 	if (m_magazine.empty()) {
