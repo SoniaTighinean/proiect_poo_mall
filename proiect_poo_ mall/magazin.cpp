@@ -45,6 +45,21 @@ int Magazin::GetNrProduse() const {
 	return total;
 }
 
+string Magazin::DescriereLunga() const {
+	string descriere = "Magazin: " + m_nume +
+		", ID: " + to_string(m_id) +
+		", tip: " + GetTipMagazin() +
+		", produse: " + to_string(GetNrProduse()) +
+		", valoare totala: " + to_string(CalculValoareTotala()) + " lei";
+
+	return descriere;
+}
+
+string Magazin::DescriereScurta() const {
+	return m_nume + " (" + GetTipMagazin() + "), " + to_string(GetNrProduse()) + " produse";
+}
+
+
 Magazin::~Magazin() {
 	for (auto* p : m_inventar) {
 		delete p;

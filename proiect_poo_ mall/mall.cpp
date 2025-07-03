@@ -64,6 +64,17 @@ void Mall::AfiseazaStatisticiPeTip() const {
 
 }
 
+string Mall::DescriereScurta() const {
+	return "Mall: " + m_nume;
+}
+
+string Mall::DescriereLunga() const {
+	return "Mall: " + m_nume +
+		", Numar magazine: " + to_string(GetNrMagazine()) +
+		", Valoare totala: " + to_string(CalculValoareTotala()) + " lei";
+}
+
+
 Mall::~Mall() {
 	for (const auto& m : m_magazine) {
 		delete m;

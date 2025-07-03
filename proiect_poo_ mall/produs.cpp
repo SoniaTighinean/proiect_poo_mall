@@ -11,3 +11,16 @@ Produs::Produs(const string& nume, double pret, int cant) : m_nume(nume), m_pret
 double Produs::CalculValoareTotala() const {
 	return m_pret * m_cantitate;
 }
+
+string Produs::DescriereLunga() const {
+    return "Produs: " + m_nume +
+        ", Categorie: " + GetCategorie() +
+        ", Pret: " + to_string(m_pret) +
+        " lei, Cantitate: " + to_string(m_cantitate) +
+        ", Valoare totala: " + to_string(CalculValoareTotala()) + " lei";
+}
+
+string Produs::DescriereScurta() const {
+    return "Nume: " + m_nume + ", Pret: " + to_string(m_pret) + " lei";
+}
+

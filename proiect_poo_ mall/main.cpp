@@ -13,6 +13,7 @@
 #include "laptop.h"
 #include "telefon.h"
 #include "mall.h"
+#include "descriere.h"
 
 int main()
 {
@@ -40,6 +41,24 @@ int main()
 	AFI->AfiseazaStatisticiPeTip();
 
 	delete AFI;
+
+	vector<Descriere*> descrieri;
+
+	Mall mall("MegaMall");
+	descrieri.push_back(&mall);
+
+	auto m1 = new MagazinElectronice("Altex", { "Apple", "Samsung" }, true);
+	descrieri.push_back(m1);
+
+	auto p1 = new Tricou("Tricou Adidas", 100, 2, "M", "bumbac", "rosu", true);
+	descrieri.push_back(p1);
+
+	for (auto d : descrieri) {
+		cout << d->DescriereScurta() << endl;
+		cout << d->DescriereLunga() << endl;
+		cout << "-------------------" << endl;
+	}
+
 
 	return 0;
 	

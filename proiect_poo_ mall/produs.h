@@ -1,9 +1,10 @@
 #pragma once
 #include <string>
+#include "descriere.h"
 
 using namespace std;
 
-class Produs {
+class Produs : public Descriere{
 protected:
 	string m_nume;
 	double m_pret;
@@ -27,6 +28,10 @@ public:
 	virtual void Afiseaza() const=0 ;
 	virtual string GetCategorie() const = 0;
 	virtual double CalculValoareTotala() const;
+	
+	string DescriereLunga() const override;
+	string DescriereScurta() const override;
+
 	virtual ~Produs(){}
 
 

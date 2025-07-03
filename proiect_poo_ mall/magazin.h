@@ -2,10 +2,11 @@
 #include <string>
 #include <vector>
 #include "produs.h"
+#include "descriere.h"
 
 using namespace std;
 
-class Magazin {
+class Magazin : public Descriere {
 protected:
 	static int next_id;
 	int m_id;
@@ -33,6 +34,10 @@ public:
 
 	virtual void Afiseaza() const = 0 ;
 	virtual string GetTipMagazin() const = 0;
+	
+	string DescriereLunga() const override;
+	string DescriereScurta() const override;
+
 	virtual ~Magazin();
 	
 

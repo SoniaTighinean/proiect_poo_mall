@@ -1,8 +1,9 @@
 #pragma once
 #include "magazin.h"
+#include "descriere.h"
 
 using namespace std;
-class Mall {
+class Mall : public Descriere {
 private:
 	string m_nume;
 	vector<Magazin*> m_magazine;
@@ -22,6 +23,9 @@ public:
 
 	void Afiseaza() const;
 	void AfiseazaStatisticiPeTip() const;
+
+	string DescriereLunga() const override;
+	string DescriereScurta() const override;
 
 	~Mall();
 

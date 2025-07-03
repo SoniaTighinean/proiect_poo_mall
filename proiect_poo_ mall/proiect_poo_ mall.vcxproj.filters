@@ -98,5 +98,8 @@
     <ClInclude Include="mall.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="descriere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
