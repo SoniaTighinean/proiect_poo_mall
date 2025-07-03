@@ -148,7 +148,7 @@
     <ClCompile Include="tricou.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="descriere.h" />
+    <ClInclude Include="afisare.h" />
     <ClInclude Include="electronice.h" />
     <ClInclude Include="laptop.h" />
     <ClInclude Include="magazin_electronice.h" />

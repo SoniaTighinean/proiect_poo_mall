@@ -12,15 +12,13 @@ double Produs::CalculValoareTotala() const {
 	return m_pret * m_cantitate;
 }
 
-string Produs::DescriereLunga() const {
-    return "Produs: " + m_nume +
-        ", Categorie: " + GetCategorie() +
-        ", Pret: " + to_string(m_pret) +
-        " lei, Cantitate: " + to_string(m_cantitate) +
-        ", Valoare totala: " + to_string(CalculValoareTotala()) + " lei";
+void  Produs::AfisareLunga() const {
+	cout << "Produs: " << m_nume;
+
 }
 
-string Produs::DescriereScurta() const {
-    return "Nume: " + m_nume + ", Pret: " + to_string(m_pret) + " lei";
+void Produs::AfisareScurta() const {
+	cout << "Produs: " << m_nume;
+
 }
 

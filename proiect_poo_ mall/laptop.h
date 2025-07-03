@@ -1,5 +1,6 @@
 #pragma once
 #include "electronice.h"
+
 class Laptop : public Electronice {
 private:
 	string m_procesor;
@@ -9,7 +10,8 @@ public:
 	Laptop();
 	Laptop(const string& nume, double pret, int cant, const string marca, int garantie, const string& procesor, int memorie);
 	
-	
-	void Afiseaza() const override;
 	double CalculValoareTotala() const override;
+
+	void AfisareLunga() const override;
+	void AfisareScurta() const override;
 };

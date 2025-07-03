@@ -11,7 +11,10 @@ public :
 	MagazinSport();
 	MagazinSport( const string & nume, const string& gen, bool cabina, const vector<string>& brand,  const string& tip);
 
-	void Afiseaza() const override;
+
 	string GetTipMagazin() const override;
+
+	void AfisareLunga() const override;
+	void AfisareScurta() const override;
 
 };

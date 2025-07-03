@@ -21,7 +21,10 @@ public:
 	bool GetService() const {
 		return m_are_service;
 	}
-	void Afiseaza() const override;
+
 	string GetTipMagazin() const override;
+
+	void AfisareLunga() const override;
+	void AfisareScurta() const override;
 
 };

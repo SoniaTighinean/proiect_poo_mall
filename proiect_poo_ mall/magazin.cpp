@@ -24,7 +24,7 @@ void Magazin::AdaugaProdus(Produs* produs) {
 void Magazin::AfiseazaInventar() const {
 	cout << "Inventar " <<m_nume<<": \n";
 	for (const auto& p : m_inventar) {
-		p->Afiseaza();
+		p->AfisareLunga();
 	}
 }
 
@@ -45,18 +45,12 @@ int Magazin::GetNrProduse() const {
 	return total;
 }
 
-string Magazin::DescriereLunga() const {
-	string descriere = "Magazin: " + m_nume +
-		", ID: " + to_string(m_id) +
-		", tip: " + GetTipMagazin() +
-		", produse: " + to_string(GetNrProduse()) +
-		", valoare totala: " + to_string(CalculValoareTotala()) + " lei";
-
-	return descriere;
+void Magazin::AfisareLunga() const {
+	
 }
 
-string Magazin::DescriereScurta() const {
-	return m_nume + " (" + GetTipMagazin() + "), " + to_string(GetNrProduse()) + " produse";
+void Magazin::AfisareScurta() const {
+	cout << "Magazin: " << m_nume;
 }
 
 

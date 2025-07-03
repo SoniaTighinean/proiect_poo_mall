@@ -9,9 +9,13 @@ Laptop::Laptop() :Electronice() {
 Laptop::Laptop(const string& nume, double pret, int cant, const string marca, int garantie, const string& procesor, int memorie):
 	Electronice(nume,pret,cant,marca,garantie), m_procesor(procesor), m_memorie(memorie) { }
 
-void Laptop::Afiseaza() const {
-	Electronice::Afiseaza();
+void Laptop::AfisareLunga() const {
+	Electronice::AfisareLunga();
 	cout << ", Procesor: " << m_procesor << ", memorie: " << m_memorie << "GB\n";
+}
+
+void Laptop::AfisareScurta() const {
+	cout << "Laptop: " << m_nume << "\n";
 }
 
 double Laptop::CalculValoareTotala() const {

@@ -9,7 +9,8 @@ public :
 	MagazinUrban();
 	MagazinUrban(string const& nume, string const& gen, bool cabina, string const& colectie);
 
-	void Afiseaza() const override;
 	string GetTipMagazin() const override;
+	void AfisareLunga() const override;
+	void AfisareScurta() const override;
 	
 };

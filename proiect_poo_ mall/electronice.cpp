@@ -9,9 +9,13 @@ Electronice::Electronice() : Produs() {
 Electronice::Electronice(const string& nume, double pret, int cant,const string&marca, int garantie) : Produs(nume, pret, cant),
 	m_marca(marca), m_garantie(garantie) { }
 
-void Electronice::Afiseaza() const {
+void Electronice::AfisareLunga() const {
 	cout << "Nume: " << m_nume << ", pret: " << m_pret << ", cantiate: " << m_cantitate;
 	cout << ", marca: " << m_marca << ", garantie: " << m_garantie<<" luni ";
+}
+
+void Electronice::AfisareScurta() const {
+	cout << "Electronice: " << m_nume << "\n";
 }
 
 double Electronice::CalculValoareTotala() const {

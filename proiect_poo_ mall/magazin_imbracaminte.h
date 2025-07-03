@@ -14,7 +14,9 @@ public:
 	MagazinImbracaminte();
 	MagazinImbracaminte(const string& nume,  const string& gen, bool cabina);
 
-	void Afiseaza() const override;
+
 	string GetTipMagazin() const override;
+	void AfisareLunga() const override;
+	void AfisareScurta() const override;
 
 };

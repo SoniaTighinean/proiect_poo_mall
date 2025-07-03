@@ -32,7 +32,7 @@ int Mall::GetNrProduse() const {
 	return total;
 }
 
-void Mall::Afiseaza() const {
+void Mall::AfisareLunga() const {
 	cout << " Mall " << m_nume << ": \n";
 	cout << "Magazine disponibile:  \n";
 	if (m_magazine.empty()) {
@@ -64,15 +64,10 @@ void Mall::AfiseazaStatisticiPeTip() const {
 
 }
 
-string Mall::DescriereScurta() const {
-	return "Mall: " + m_nume;
+void Mall::AfisareScurta() const {
+	cout << "Nume Mall: " << m_nume <<"\n";
 }
 
-string Mall::DescriereLunga() const {
-	return "Mall: " + m_nume +
-		", Numar magazine: " + to_string(GetNrMagazine()) +
-		", Valoare totala: " + to_string(CalculValoareTotala()) + " lei";
-}
 
 
 Mall::~Mall() {
