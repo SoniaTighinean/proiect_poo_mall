@@ -11,11 +11,11 @@ Pantaloni::Pantaloni(const string& nume, double pret, int cant, const string& ma
 
 void Pantaloni::AfisareDetaliata() const {
 	Haina::AfisareDetaliata();
-	cout << "Tip: " << m_tip << ", nr_buzunare: " << m_nr_buzunare;
+	cout << "Tip: " << m_tip << ", nr_buzunare: " << m_nr_buzunare<<"\n";
 }
 
 void Pantaloni::AfisareScurta() const {
-	cout << "ceva";
+	cout << "Pantaloni:"<<m_nume<<"\n ";
 }
 
 double Pantaloni::CalculValoareTotala() const {
