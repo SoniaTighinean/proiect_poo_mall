@@ -41,7 +41,7 @@ public:
 	void AfisareDetaliata() const override;
 	void AfisareScurta() const override;
 
-	virtual ~Magazin();
+	virtual ~Magazin() {}
 	
 
 };

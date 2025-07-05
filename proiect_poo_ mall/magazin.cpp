@@ -76,7 +76,3 @@ void Magazin::AfisareScurta() const {
 }
 
 
-Magazin::~Magazin() {
-
-}
-

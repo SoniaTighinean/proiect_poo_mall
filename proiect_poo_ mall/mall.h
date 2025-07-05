@@ -1,12 +1,13 @@
 #pragma once
 #include "magazin.h"
+#include <memory>
 #include "afisare.h"
 
 using namespace std;
 class Mall : public Afisare {
 private:
 	string m_nume;
-	vector<Magazin*> m_magazine;
+	std::vector<shared_ptr<Magazin>> m_magazine;
 
 public:
 	Mall();
@@ -16,7 +17,7 @@ public:
 		return m_nume;
 	}
 
-	void AdaugaMagazin(Magazin* magazin);
+	void AdaugaMagazin(std::shared_ptr<Magazin> magazin);
 	double CalculValoareTotala() const;
 	int GetNrProduse() const;
 	int GetNrMagazine() const ;
@@ -26,6 +27,6 @@ public:
 	void AfisareDetaliata() const override;
 	void AfisareScurta() const override;
 
-	~Mall();
+	~Mall() {};
 
 };

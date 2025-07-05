@@ -8,7 +8,7 @@ Mall::Mall() {
 
 Mall::Mall(const string&nume) : m_nume(nume){}
 
-void Mall::AdaugaMagazin(Magazin* magazin) {
+void Mall::AdaugaMagazin(std::shared_ptr<Magazin> magazin) {
 	if (magazin != nullptr) {
 		m_magazine.push_back(magazin);
 	}
@@ -68,10 +68,3 @@ void Mall::AfisareScurta() const {
 	cout << "Nume Mall: " << m_nume <<"\n";
 }
 
-
-
-Mall::~Mall() {
-	for (const auto& m : m_magazine) {
-		delete m;
-	}
-}
