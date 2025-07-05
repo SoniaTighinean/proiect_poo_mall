@@ -11,7 +11,7 @@ protected:
 	static int next_id;
 	int m_id;
 	string m_nume;
-	vector<shared_ptr<Produs*>> m_inventar;
+	vector<Produs*> m_inventar;
 
 public:
 	Magazin(); 

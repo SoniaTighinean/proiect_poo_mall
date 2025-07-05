@@ -13,11 +13,12 @@ Magazin::Magazin(const string& nume) : m_nume(nume) {
 	m_id = ++next_id;
 }
 
-void Magazin::AdaugaProdus(shared_ptr<Produs> produs) {
-	if (!produs) {
-		throw std::invalid_argument("Produsul e null");
+void Magazin::AdaugaProdus(Produs* produs) {
+	if (produs == nullptr) {
+		throw invalid_argument("Produsul e null");
 	}
 	m_inventar.push_back(produs);
+
 }
 
 void Magazin::AfiseazaInventar() const {
@@ -55,16 +56,16 @@ int Magazin::NrProduseCategorie(const string& categorie) const {
 }
 
 Produs* Magazin::GetCelMaiScumpProdus() const {
-	if (m_inventar.empty())
+	if (m_inventar.empty()) 
 		return nullptr;
 
-	auto maxim = m_inventar[0];
+	Produs* maxim = m_inventar[0];
 	for (const auto& p : m_inventar) {
 		if (p->EsteMaiScumpCa(*maxim)) {
 			maxim = p;
 		}
 	}
-	return maxim.get();
+	return maxim;
 }
 
 void Magazin::AfisareDetaliata() const {

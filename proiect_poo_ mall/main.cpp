@@ -102,6 +102,26 @@ int main()
 	cout << "Afiseare Statistici pentru fiecare tip: \n";
 	AFI->AfiseazaStatisticiPeTip();
 
+	vector<Produs*> produse = { p1, p2, p3, p4, p5 };
+	for (const auto& p : produse) {
+		cout << p->GetNume() << " ";
+		cout << "E disponibil :";
+		if (p->EsteDisponibil())
+			cout << " DA ";
+		else
+			cout << " NU ";
+        cout << "Pret: " << p->GetPret() << "\n";
+	}
+
+	for (const auto& m : magazine) {
+		cout << m->GetNume();
+		auto maxim = m->GetCelMaiScumpProdus();
+		cout << " Cel mai scump produs: " << maxim->GetNume()<<"\n";
+		cout << "Produse din categoria Haine: " << m->NrProduseCategorie("Haine") << "\n";
+	}
+
+	delete AFI;
+
 	
 	return 0;
 }

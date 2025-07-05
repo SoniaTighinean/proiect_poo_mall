@@ -28,6 +28,10 @@ public:
 	
 	virtual string GetCategorie() const = 0;
 	virtual double CalculValoareTotala() const;
+
+	bool EsteDisponibil() const;
+	bool EsteMaiScumpCa(const Produs& produs) const;
+
 	
 	void AfisareDetaliata() const override;
 	void AfisareScurta() const override;

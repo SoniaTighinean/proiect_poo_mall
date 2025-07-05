@@ -12,6 +12,15 @@ double Produs::CalculValoareTotala() const {
 	return m_pret * m_cantitate;
 }
 
+bool Produs::EsteDisponibil() const {
+	return m_cantitate > 0;
+}
+
+bool Produs::EsteMaiScumpCa(const Produs& produs) const {
+	return m_pret > produs.m_pret;
+}
+
+
 void  Produs::AfisareDetaliata() const {
 	cout << "Produs: " << m_nume << ", Pret: "<<m_pret<<", Cantitate: "<<m_cantitate<<"\n";
 
