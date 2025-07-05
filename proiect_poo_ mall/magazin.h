@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <memory>
 #include "produs.h"
 #include "afisare.h"
 
@@ -11,7 +12,7 @@ protected:
 	static int next_id;
 	int m_id;
 	string m_nume;
-	vector<shared_ptr<Produs*>> m_inventar;
+	std::vector<std::shared_ptr<Produs>> m_inventar;
 
 public:
 	Magazin(); 
@@ -26,7 +27,7 @@ public:
 		return m_nume;
 	}
 
-	void AdaugaProdus(Produs* produs);
+	void AdaugaProdus(std::shared_ptr<Produs> produs);
 	void AfiseazaInventar() const;
 	double CalculValoareTotala() const;
 	int GetNrProduse() const;
@@ -35,7 +36,7 @@ public:
 	virtual string GetTipMagazin() const = 0;
 
 	int NrProduseCategorie(const string& categorie) const;
-	Produs* GetCelMaiScumpProdus() const;
+	std::shared_ptr<Produs> GetCelMaiScumpProdus() const;
 	
 	void AfisareDetaliata() const override;
 	void AfisareScurta() const override;

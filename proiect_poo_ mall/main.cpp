@@ -31,11 +31,11 @@ int main()
 
 
 	//crearea produselor diferite
-	Haina* p1 = new Tricou("Tricou adidas", 50.0, 2, "M", "bumbac", "rosu", true);
-	Laptop* p2 = new Laptop("Laptop ASUS", 5499.99, 1, "ASUS", 24, "Intel i7", 1000);
-	Telefon* p3 = new Telefon("Iphone 16", 4599.99, 2, "Apple ", 48, 256, 8);
-	Haina* p4 = new Haina("Bluza", 100.00, 1, "M", "bumbac");
-	Electronice* p5 = new Electronice("Aspirator", 2499.99, 3, "DELL", 12);
+	auto p1 = make_shared<Tricou>("Tricou adidas", 50.0, 2, "M", "bumbac", "rosu", true);
+	auto p2 = make_shared<Laptop>("Laptop ASUS", 5499.99, 1, "ASUS", 24, "Intel i7", 16);
+	auto p3 = make_shared<Telefon>("Iphone 16", 4599.99, 2, "Apple", 48, 256, 8);
+	auto p4 = make_shared<Haina>("Bluza", 100.00, 1, "M", "bumbac");
+	auto p5 = make_shared<Electronice>("Aspirator", 2499.99, 3, "DELL", 12);
 
 	//asocierea magazinelor cu mall-ul
 	AFI->AdaugaMagazin(m1);
@@ -59,9 +59,9 @@ int main()
 	tot.push_back(m2);
 	tot.push_back(m3);
 
-	tot.push_back(p1);
-	tot.push_back(p2);
-	tot.push_back(p3);
+	tot.push_back(p1.get());
+	tot.push_back(p2.get());
+	tot.push_back(p3.get());
 
 	cout << "Afisarea toturor delaliilor: \n";
 	for (const auto& t : tot) {
@@ -102,7 +102,7 @@ int main()
 	cout << "Afiseare Statistici pentru fiecare tip: \n";
 	AFI->AfiseazaStatisticiPeTip();
 
-	vector<Produs*> produse = { p1, p2, p3, p4, p5 };
+	vector<shared_ptr<Produs>> produse = { p1, p2, p3, p4, p5 };
 	for (const auto& p : produse) {
 		cout << p->GetNume() << " ";
 		cout << "E disponibil :";
@@ -116,7 +116,9 @@ int main()
 	for (const auto& m : magazine) {
 		cout << m->GetNume();
 		auto maxim = m->GetCelMaiScumpProdus();
-		cout << " Cel mai scump produs: " << maxim->GetNume()<<"\n";
+		if (maxim) {
+			cout << " Cel mai scump produs: " << maxim->GetNume() << "\n";
+		}
 		cout << "Produse din categoria Haine: " << m->NrProduseCategorie("Haine") << "\n";
 	}
 

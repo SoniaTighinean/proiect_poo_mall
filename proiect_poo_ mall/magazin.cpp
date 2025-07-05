@@ -13,7 +13,7 @@ Magazin::Magazin(const string& nume) : m_nume(nume) {
 	m_id = ++next_id;
 }
 
-void Magazin::AdaugaProdus(shared_ptr<Produs> produs) {
+void Magazin::AdaugaProdus(std::shared_ptr<Produs> produs) {
 	if (!produs) {
 		throw std::invalid_argument("Produsul e null");
 	}
@@ -31,7 +31,7 @@ double Magazin::CalculValoareTotala() const {
 	double total = 0.0;
 
 	for (const auto& p : m_inventar) {
-		total += p->GetPret() * p->GetCantitate();
+		total += p->CalculValoareTotala();
 	}
 	return total;
 }
@@ -54,7 +54,7 @@ int Magazin::NrProduseCategorie(const string& categorie) const {
 	return nr;
 }
 
-Produs* Magazin::GetCelMaiScumpProdus() const {
+std::shared_ptr<Produs> Magazin::GetCelMaiScumpProdus() const {
 	if (m_inventar.empty())
 		return nullptr;
 
@@ -64,7 +64,7 @@ Produs* Magazin::GetCelMaiScumpProdus() const {
 			maxim = p;
 		}
 	}
-	return maxim.get();
+	return maxim;
 }
 
 void Magazin::AfisareDetaliata() const {
@@ -77,9 +77,6 @@ void Magazin::AfisareScurta() const {
 
 
 Magazin::~Magazin() {
-	for (auto* p : m_inventar) {
-		delete p;
-	}
 
 }
 
