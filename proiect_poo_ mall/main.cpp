@@ -116,7 +116,6 @@ int main()
         std::cout << "Produse din categoria Haine: " << m->NrProduseCategorie("Haine") << "\n";
     }
 
-    // No need to delete, shared_ptr handles memory
 
     return 0;
 }
